@@ -1,0 +1,67 @@
+/* Загальний стиль */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+/* Стиль для меню */
+#sidebar {
+    width: 250px;
+    background-color: #2d3c2d; /* Темно-зелений колір фону */
+    color: #ffffff; /* Білий текст */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebar h2 {
+    margin: 0 0 20px;
+    font-size: 22px;
+    text-align: center;
+    color: #d4edda; /* Світло-зелений текст */
+}
+
+#sidebar button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #557a55; /* Зелений для кнопок */
+    color: #ffffff; /* Білий текст */
+    transition: background-color 0.3s;
+}
+
+#sidebar button:hover {
+    background-color: #6b996b; /* Світліший зелений для наведення */
+}
+
+#sidebar button:disabled {
+    background-color: #3e573e; /* Тьмяно-зелений для неактивних кнопок */
+    cursor: not-allowed;
+    color: #c1c1c1; /* Світло-сірий текст */
+}
+
+/* Стиль для карти */
+#map {
+    flex: 1;
+    height: 100%;
+}
+
+/* Для адаптації */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    #map {
+        height: calc(100vh - 300px);
+    }
+}
